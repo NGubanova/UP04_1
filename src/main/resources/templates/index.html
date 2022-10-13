@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my site</title>
+</head>
+
+<style>
+    body {
+        background: #A1A2B3;
+    }
+    h1 {
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 48px;
+        font-family: 'Segoe UI';
+        font-weight: 700;
+    }
+    h2 {
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 36px;
+        font-family: 'Segoe UI';
+        font-weight: 500;
+    }
+
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        align-content: center;
+        border-radius: 20px;
+        padding: 20px;
+        width: 590px;
+        background: #D4D1DB;
+        color: #FFFFFF;
+        font-family: 'Segoe UI';
+        vertical-align: middle;
+    }
+
+    input {
+        background: #FFFFFF;
+        color: #9799A6;
+        padding: 10px;
+        margin: 10px;
+        width: 550px;
+        border-radius: 10px;
+        border-width: 0px;
+        font-size: 18px;
+        font-family: 'Segoe UI';
+        font-weight: 600;
+    }
+
+    label{
+        color: #626473;
+        margin: 10px;
+        font-size: 18px;
+        font-family: 'Segoe UI';
+        font-weight: 600;
+    }
+    select{
+        margin: 10px;
+        font-size: 18px;
+        font-family: 'Segoe UI';
+        font-weight: 600;
+        border-radius: 7px;
+        border-width: 0px;
+    }
+</style>
+<body>
+<h1>Кастрированный калькулятор</h1>
+<form action="/" method="post">
+    <input type="number" placeholder="первое число" name="a"><br>
+    <input type="number" placeholder="второе число" name="b"><br>
+    <label for="calc">Выберите действие:</label>
+    <select name="action" id="calc">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br>
+    <input type="submit" value="Получить результат">
+</form>
+<h2 th:text="'Результат: '+${result}"></h2>
+</body>
+</html>
